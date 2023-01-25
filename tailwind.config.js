@@ -9,6 +9,15 @@ module.exports = {
 		fontFamily: {
 			manrope: "var(--manrope-font)",
 		},
+		screens: {
+			sm: "640px",
+
+			md: "768px",
+
+			lg: "1024px",
+
+			xl: "1440px",
+		},
 		extend: {
 			colors: {
 				peru: "#D87D4A",
