@@ -1,5 +1,6 @@
-import "./globals.css";
+import "../../styles/globals.css";
 import { Manrope } from "@next/font/google";
+import Header from "@/components/Header";
 
 const manrope = Manrope({
 	variable: "--manrope-font",
@@ -14,7 +15,10 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={manrope.variable}>
 			<head />
-			<body className="font-manrope">{children}</body>
+			<body className="font-manrope">
+				<Header />
+				{children}
+			</body>
 		</html>
 	);
 }
