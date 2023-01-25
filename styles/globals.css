@@ -7,6 +7,6 @@
 		@apply sticky top-0 flex items-center justify-between border-b-[1px] border-white bg-chineseBlack px-6 py-8  md:px-10 xl:px-[165px];
 	}
 	.footer {
-		@apply;
+		@apply flex flex-col bg-chineseBlack px-6 py-8 md:px-10 xl:flex-row xl:justify-between xl:px-[165px];
 	}
 }
