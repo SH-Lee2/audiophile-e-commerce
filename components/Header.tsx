@@ -30,7 +30,7 @@ const Header = () => {
 				<Image src={logo} alt="logo" width={143} height={25} quality={100} />
 			</Link>
 			<div className="flex gap-x-[317px]">
-				<Nav />
+				<Nav styles="hidden xl:flex" />
 				<Image
 					src={cart}
 					alt="sidebar open button"
