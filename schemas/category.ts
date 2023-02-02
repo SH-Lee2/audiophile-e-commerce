@@ -23,5 +23,10 @@ export default defineType({
 			title: "ButtonText",
 			type: "string",
 		}),
+		defineField({
+			name: "link",
+			title: "Link",
+			type: "string",
+		}),
 	],
 });

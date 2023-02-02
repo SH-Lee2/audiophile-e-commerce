@@ -15,6 +15,13 @@ interface Banner extends Base {
 	link: string;
 }
 
+interface Category extends Base {
+	name: string;
+	image: Image;
+	buttonText: string;
+	link: string;
+}
+
 interface Product extends Base {
 	category: Reference;
 	des: string;
