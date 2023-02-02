@@ -11,6 +11,19 @@ export default defineType({
 			type: "string",
 		}),
 		defineField({
+			name: "image",
+			title: "Image",
+			type: "array",
+			of: [
+				{
+					type: "image",
+					options: {
+						hotspot: true,
+					},
+				},
+			],
+		}),
+		defineField({
 			name: "product",
 			title: "Product",
 			type: "reference",
@@ -24,6 +37,11 @@ export default defineType({
 		defineField({
 			name: "desc",
 			title: "Desc",
+			type: "string",
+		}),
+		defineField({
+			name: "link",
+			title: "link",
 			type: "string",
 		}),
 	],
