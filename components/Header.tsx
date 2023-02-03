@@ -10,6 +10,10 @@ import Nav from "./Nav";
 const Header = () => {
 	const [sidebar, setSideber] = useState(false);
 
+	const categoryClickHandler = () => {
+		setSideber(false);
+	};
+
 	return (
 		<header className="header">
 			<div className="flex w-full justify-between border-b-[1px] border-white/25 px-6 py-8 md:px-10 xl:px-[165px]">
@@ -66,7 +70,7 @@ const Header = () => {
 			</div>
 			{sidebar && (
 				<div className="w-full bg-white pb-[35px] pt-[84px] transition-all duration-200 md:pt-[108px] md:pb-[67px]  xl:hidden">
-					<Category />
+					<Category onClick={categoryClickHandler} />
 				</div>
 			)}
 		</header>

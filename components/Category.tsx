@@ -5,13 +5,17 @@ import { rightArrow } from "@/public";
 import { groq } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+
+type Props = {
+	onClick?: () => void;
+};
 
 const query = groq`*[_type == 'category']{
   ...
 }`;
 
-const Category = () => {
+const Category = ({ onClick }: Props) => {
 	const [categorys, setCategorys] = useState<Array<Category>>([]);
 
 	useEffect(() => {
@@ -29,6 +33,7 @@ const Category = () => {
 				<Link
 					key={category._id}
 					href={category.link}
+					onClick={onClick && onClick}
 					className="flex w-full  text-[13px] font-bold leading-[17.76px] tracking-[1px] text-black hover:text-peru"
 				>
 					<div
